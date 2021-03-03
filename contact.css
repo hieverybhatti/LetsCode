@@ -2,12 +2,12 @@ body{
     background-color: #5e17eb;
 }
 
-#contactTable table {
+#contactTable {
     table-layout: fixed ;
     width: 70% ;
     float: left;
   }
   
-  #contactTable table td {
+  #contactTable td {
     width: 25% ;
   }
