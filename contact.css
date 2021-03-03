@@ -1,9 +1,13 @@
-table {
+body{
+    background-color: #5e17eb;
+}
+
+#contactTable table {
     table-layout: fixed ;
     width: 70% ;
     float: left;
   }
   
-  td {
+  #contactTable table td {
     width: 25% ;
   }
