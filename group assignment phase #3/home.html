@@ -13,39 +13,57 @@
 </head> 
 
 <body>
-    <!--<a class = "active" href ="#home"> </a> make image a button -->
     <!--navigation bar-->
     <header class = "nav-bar">
-        <div class="logobutton"> <!--might change to id because diff on others-->
-            <img src = <a href = "home"> </a> >
+        <div class="logo-bar"> <!--might change to id because diff on others-->
+            <a href = "home.html">
+                <img src = "brandDesign/logo_icon.PNG" width="40px">
+            </a> 
         </div>
         <nav id = "navbuttons">
-            <a href = "#starting">STARTING OUT</a>
-            <a href = "#starting">LOGIN</a>
-            <a href = "#starting">ABOUT US</a>
+            <a href = "blank.html">STARTING OUT</a>
+            <a href = "blank.html">LOGIN</a>
+            <a href = "contact.html">ABOUT US</a>
         </nav>
     </header>
-    <div class = "wrapper"> 
 
-        
+    <!--first page layout-->
+    <div class = "wrapper"> 
         <div class = "content-area">
             <div id = "first-page">
-                <img src = "#logo introduction image" alt = "mainscreenimage" >
+                <img src = "brandDesign/logo_intro.PNG" alt = "mainscreenimage">
+                
             </div>
+        </div>
+    <!--second page layout-->
+        <div class = "content-area">
+            <form method = "POST" id = "loginscreen">
+                <div class = "login-container">
+                    <label for ="uName"> 
+                        <input type ="text" placeholder="Enter Username" name = "uName" required>
+                    </label> 
 
-            <form id = "loginscreen">
+                    <label for = "uPass">
+                        <input type = "password" placeholder="Enter Password" name = "uPass" required>
+                    </label>
+
+                    <button type = "submit">get started</button>
+                </div>
                         <!--login page goes here-->
                         <!-- squared, background different, bordered, with login, using forms-->
             </form>
         </div>
     </div>
-            
+    
+    <footer>
 
+    </footer>
         
-    </div>
 
 
     <!--logo next to search bar-->
     <!--search bar-->
     
 </body>
+
+</html>
