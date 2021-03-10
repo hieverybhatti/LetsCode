@@ -23,7 +23,6 @@ footer {
 
 
 .wrapper {
-  border: 1px solid red;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 0px;
 }
@@ -68,7 +67,6 @@ footer {
 
 .content-area { 
   margin-top: 50px;
-  border: 3px solid #fff;
   margin-left: auto;
   margin-right: auto;
 }
@@ -79,6 +77,42 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+
+/* website info css */
+
+#aimTable {
+  width: 90%;
+border-spacing: 50px;
+}
+
+#aimTable td {
+background-image: linear-gradient(to bottom right, #00c4cc, #7c2ae8);
+  width: 50%;
+font-size: 25pt;
+vertical-align: center;
+padding: 1em;
+}
+
+#aimTable th {
+  width: max(350px, 30%);
+}
+
+#aimTable img {
+border-radius: 50%;
+width:350px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 2em;
+margin-bottom: 2em;
+}
+
+#aimTable h3 {
+  font-weight: bold;
+}
+
 
   /* about page css */
 
