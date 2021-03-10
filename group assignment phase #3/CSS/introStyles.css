@@ -66,9 +66,7 @@ footer {
 }
 
 .content-area { 
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 120px;
 }
 
 .content-area img {
@@ -78,39 +76,51 @@ footer {
   margin-right: auto;
 }
 
-
+#search {
+  width: 450px;
+  height: 35px;
+  font-size: 17pt;
+  text-align: center;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+	
+}
 
 /* website info css */
 
 #aimTable {
-  width: 90%;
-border-spacing: 50px;
+  width: 1000px;
+  border-spacing: 40px 60px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #aimTable td {
-background-image: linear-gradient(to bottom right, #00c4cc, #7c2ae8);
-  width: 50%;
-font-size: 25pt;
-vertical-align: center;
-padding: 1em;
+  background-image: linear-gradient(to bottom right, #00c4cc, #7c2ae8);
+  width: 500px;
+  font-size: 17pt;
+  vertical-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#aimTable h4 {
+	font-size: 19pt;
+	margin-top: 0;
 }
 
 #aimTable th {
-  width: max(350px, 30%);
+  width: 300px;
 }
 
 #aimTable img {
 border-radius: 50%;
-width:350px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 2em;
-margin-bottom: 2em;
-}
-
-#aimTable h3 {
-  font-weight: bold;
+width:280px;
 }
 
 
@@ -157,7 +167,7 @@ margin-bottom: 2em;
   
   
 #contactTable td {
-  width: 45%;
+  	width: 45%;
 	font-size: 11pt;
 	text-align: left;
 	vertical-align: text-top;
@@ -165,14 +175,14 @@ margin-bottom: 2em;
   
 #contactTable td img {
 	border-radius: 50%;
-  width: 45%;
+  	width: 45%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
   }
   
 #contactTable th img {
-  display: block;
+  	display: block;
 	border-radius: 0px;
 	width: 40%;
 	margin-left: auto;
