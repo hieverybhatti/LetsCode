@@ -1,0 +1,55 @@
+Yeonji and Gavin = about us/contact page
+Fransic = navg bar. 
+Haris = Home page layout and integrate logo etc 
+
+make sure to commit changes with a message. Here is a git cheatsheet to help if needed
+
+
+1. Cloning repo from github: 
+   * Open Terminal
+   * Change the current working directory to the location where you want the cloned directory (I just made a “CS324e final proj” folder on my desktop)
+   * Type in terminal:  “$ git clone <html clone link here>”
+   * Press Enter
+   * “$ cd cs324e_final_project”
+   * “$ ls” to display contents of repo
+
+
+2. Creating your own branch
+   * “$ git branch” to list all branches
+   * “$ git checkout -b <name_of_your_branch>” to create a new branch
+   * If you ever want to switch back to master branch just do “$ git checkout master” 
+   * If you want to return to your branch:  “$ git checkout <name_of_your_branch>”
+
+
+3. Committing your changes to Git and pushing to remote repo
+   * Optional: “$ git status” to see what files are staged/unstaged/untracked
+   * Optional: “$ git diff” to see differences between your index and working directory
+   * “$ git add” to add edits to staging (basically telling git these are the changes you want to include in your next commit)
+      * You can either do “$ git add .” to stage changes in current directory or “$ git add <filename>” to add only a specific file or “$ git add -A” to stage all changes include=ing changes in other directories
+   * “$ git commit -m “type message/description of commit here” “ this will commit whatever you previously added to staging
+   * “$ git push origin” will upload content from local repo to remote repo
+
+
+4. Merging Branches
+   * Only do this when you want to merge all changes from your branch to master
+   * Make sure your branch is up to date with master or else there will be conflicts and merge will fail
+   * Merge fails when you commit changes that are in conflict with someone else’s commited changes
+      * To ensure merge does not fail, best practice is to first do:
+         * “$ git checkout master”
+         * “$ git pull” (git pull is a combination of git fetch and git merge. It automatically fetches the changes and merges to your remote repository while git fetch will only show you what changes there are without merging them)
+         * And then finally make your changes to/edit files in your branch or master
+      * Another way to ensure this is to communicate with your team to make sure no one is making changes to master in their local repository and pushing them to git/remote repo while you are doing the same. Effectively, we should all be editing the latest version of master. So if I update master without telling you and then you edit master or try to merge your branch with it, your commit will fail. 
+
+
+5. Resolving merge conflicts
+   * Easiest way is to stash your files (if you do not want to lose them):
+      * “$ git status” to see your changes
+      * “$ git stash” for a single file or “$ git stash --all” for multiple (this pushes your changes to your stack)
+      * Do “$ git status” again to see that now your working dir is clean 
+      * To see what stashes you stored do “$ git stash list”
+   * After stashing files, do “$ git pull” to merge with latest version
+   * Now try to apply your stashes to commit again “$ git stash pop” will apply your latest stash and then remove it from the stack
+   * Riskier way to resolve a merge conflict (when you don’t want to keep the files you edited):
+      * “$ git clean” this will wipe all changes from your working directory so only use it if you are sure of what you are doing
+      * Before doing “$ git clean” I like to first run “$ git clean -n” (a dry run that will tell you what it will be deleting so you can be sure) and then after do “$ git clean”
+      * If “$ git clean” doesn’t work, do “$ git clean -f” to forcefully remove all untracked files from your working directory
