@@ -32,9 +32,10 @@ footer {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 900px;
+  max-width: 850px;
   background-color:#6ea4ed;
   color: white;
+  padding: 1em;
 }
 
 .nav-bar {
@@ -347,4 +348,18 @@ width:280px;
   border-color: black;
 }
 
+/*doc page*/
+.doc_title {
+	font-size: 30pt;
+	font-weight: bold;
+}
 
+.doc {
+	font-size: 15pt;
+}
+
+.code {
+	padding-left: 1em;
+	padding-bottom: 1em;
+	width: 30%;
+}
