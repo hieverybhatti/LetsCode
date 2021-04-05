@@ -235,3 +235,61 @@ width:280px;
   text-align: right;
 }
 
+/* about signup page */
+
+.signup-box{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  background-image: linear-gradient(to bottom right, #00c4cc, #7c2ae8);
+  color: white;
+  padding: 1em;
+  margin-bottom: 4em;
+}
+
+.sign {
+	border-radius: 40px;
+	font-size: 25pt;
+	background-color:#7c2ae8;
+	color: white;
+	border: none;
+	margin-top: 1em;
+	padding: 5px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bold;
+}
+
+#signup {
+	width: 100%;
+	font-size: 16pt;
+}
+
+#signup th {
+	text-align: left;
+	padding-left: 1.5em;
+}
+
+#signup td {
+	text-align: center;
+}
+
+#signup input {
+	width: 90%;
+	border: none;
+	font-size: 15pt;
+	padding: 1px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-bottom: 1em;
+	margin-top: 2px;
+}
+
+#checker {
+	margin-left: 6%;
+	margin-top: 1em;
+	width: 90%;
+	font-size: 12pt;
+}

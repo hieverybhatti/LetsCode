@@ -28,47 +28,47 @@
             <a href="../../About/contact.html">ABOUT US</a>
         </nav>
     </header>
-
+<div class="content-area">
+<div class="signup-box">
 <form>
-<table>
+<table id="signup">
     <tr>
-        <th>Username:</th>
+        <th>username:</th>
     </tr>
     <tr>
         <td><input id="U" name="username" type="text"/></td>
     </tr>
     <tr>
-        <th>Password:</th>
+        <th>password:</th>
     </tr>
     <tr>
         <td><input id="P" name="password" type="password"/></td>
     </tr>
     <tr>
-        <th>Repeat password: </th>
+        <th>repeat password: </th>
     </tr>
     <tr>
         <td><input id="R" name="repeat password" type="password"/></td>
     </tr>
-    <tr>
-        <td><input type="button" value="Register" onclick="calculateValue()"/>
-		<input type="button" value="Clear" onclick="resetValue()"/></td>
-    </tr>
 </table>
-<table>
+<table id="checker">
     <tr>
-        <td><span class="check" id="lower">&#10006;</span> One lowercase character</td>
-        <td><span class="check" id="upper">&#10006;</span> One uppercase character</td>
+        <td><span class="check" id="lower">&#10006;</span> one lowercase character</td>
+        <td><span class="check" id="upper">&#10006;</span> one uppercase character</td>
     </tr>
     <tr>
-        <td><span class="check" id="num">&#10006;</span> One number</td>
+        <td><span class="check" id="num">&#10006;</span> one number</td>
         <td><span class="check" id="six">&#10006;</span> 6 characters minimum</td>
     </tr>
     <tr>
-        <td><span class="check" id="match">&#10006;</span> Passwords match</td>
-        <td><span class="check" id="special">&#10006;</span> No special character</td>
+        <td><span class="check" id="match">&#10006;</span> passwords match</td>
+        <td><span class="check" id="special">&#10006;</span> no special character</td>
     </tr>
 </table>
+<input class="sign" type="button" value=" get started " onclick="calculateValue()"/>
 </form>
+</div>
+</div>
 
 
     <footer>
