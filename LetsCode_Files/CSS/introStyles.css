@@ -312,3 +312,16 @@ width:280px;
 
 }
 
+.slideshow_outer {
+  position: relative;
+}
+
+.slideshow_inner img {
+  position: absolute;
+  display:block;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+}
+
