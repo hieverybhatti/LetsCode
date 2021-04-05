@@ -325,3 +325,28 @@ width:280px;
   margin:auto;
 }
 
+.practice_box {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 850px;
+  background-image: linear-gradient(to bottom right, #00c4cc, #7c2ae8);
+  color: white;
+  padding: 1em;
+  margin-bottom: 4em;
+}
+
+.practice_table {
+  background-color: white;
+  margin-left:auto; 
+  margin-right:auto;
+  text-align: center;
+  
+}
+
+.practice_table td {
+  border-style:double;
+  border-color: black;
+}
+
+
