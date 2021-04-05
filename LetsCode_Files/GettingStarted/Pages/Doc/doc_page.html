@@ -13,71 +13,23 @@
 </head>
 
 <body>
-    <!--navigation bar-->
+    <!--Beginning of Navbar-->
 
-    <header class="nav-bar">
-        <div class="logo-bar">
-            <a href="../../../Home/home.html">
-                <img src="../../../brandDesign/logo_icon.PNG" width="40px">
-            </a>
-        </div>
-        <nav id="navbuttons">
-            <a href="../../g_start.html">STARTING OUT</a>
-            <a href="../../../EntryForm/SignUp/signup.html">SIGN UP</a>
-            <a href="../../../About/contact.html">ABOUT US</a>
-			<a href = "../../../Home/home.html">HOME</a>
-        </nav>
-    </header>
 
-    <!--end of navigation bar -->
-    <br><br><br>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("../NavFootPages/navbar.html");
+            $("#footer-placeholder").load("../NavFootPages/footer.html");
 
-    <div class="wrapper">
-	<div class="doc_title">Documentation-Loops</div>
-        <div class="info-box">
-		<div class="doc">
-			<p><b>Loops</b> are used to repeat certain part of the code.
-			<br>There are two types of loops: <b>for loops</b> and <b>while loops</b>.</p>
-            <p>A <i>for loop</i> is generally used when the code repeats for <u>a definite number of times</u>.
-			<br>A <i>while loop</i> is generally used when the code repeats until <u>a condition is met</u>.</p>
-			<table>
-			<tr>
-			<td>Example:</td>
-			<td></td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code">for x in range(3):<br>&nbsp; print("*")</td>
-			<td colspan="2" rowspan="2">These two loops will both have same result with "***" but with different approach.
-			<br>The for loop had a numeric range of repetition.
-			<br>On the other hand, the while loop had a condition of y < 3 which was met after repeating the loop 3 times.</td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code">y = 0<br>while (y < 3):<br>&nbsp; print("*")<br>&nbsp; y += 1</td>
-			<td></td>
-			<td></td>
-			</tr>
-			<tr>
-			<td colspan="2">for more information:</td>
-			<td></td>
-			<td></td>
-			</tr>
-			<tr>
-			<td><a href="https://www.geeksforgeeks.org/python-for-loops/"><img class="site" src="site_logos/gfg.PNG"></a></td>
-			<td><a href="https://www.w3schools.com/python/python_for_loops.asp"><img class="site" src="site_logos/w3.PNG"></a></td>
-			<td><a href="https://www.programiz.com/python-programming/for-loop"><img class="site" src="site_logos/programiz.PNG"></a></td>
-			</tr>
-			</table>
-		</div>
-        </div>
-	</div>
-    <footer>
+        });
+    </script>
+    <!--End of Navbar-->
 
-            <div id="leftfoot"> &#169; Haris Bhatti, Gavin Wurm, Yeonji Kim, Francesc Aguilar Lite</div>
-            <div id="rightfoot">3/10/2021</div>
-    
-    </footer>
+
+    <!--footer-->
+    <div id="nav-placeholder"></div>
 </body>
 
 </html>
