@@ -1,21 +1,13 @@
 var inputV;
 var flag;
+var flags;
 var yes = "&#10004;";
 var no = "&#10006;";
 
 function calculateValue() {
-	var valid = document.getElementsByClassName("check");
 	flag = true;
-	var i = 0;
-	while (flag) {
-		alert(valid[i].innerHTML);
-		if (i >= valid.length) {
-			break;
-		}
-		if (valid[1].innerHTML == no) {
-			flag = false;
-		}
-		i++;
+	if (flags.includes("n")) {
+		flag = false;
 	}
 	if (flag == true) {
 		clearInterval(inputV);
@@ -38,15 +30,19 @@ function checkInput() {
 	// out of length
 	if (U.length < 6 || P.length < 6) {
 		document.getElementById("six").innerHTML = no;
+		flags[0] = "n";
 	} else {
 		document.getElementById("six").innerHTML = yes;
+		flags[0] = "y";
 	}
 
 	// password and repeat not equal
 	if (P !== RP || P.length == 0) {
 		document.getElementById("match").innerHTML = no;
+		flags[1] = "n";
 	} else {
 		document.getElementById("match").innerHTML = yes;
+		flags[1] = "y";
 	}
 
 	// check letters and digits
@@ -54,25 +50,33 @@ function checkInput() {
 	var checkP = checkContain(P);
 	if (checkU == false || checkP == false) {
 		document.getElementById("special").innerHTML = no;
+		flags[2] = "n";
 	} else {
 		document.getElementById("special").innerHTML = yes;
+		flags[2] = "y";
 	}
 
 	// check cases and digits
 	if (!/[A-Z]/.test(U) || !/[A-Z]/.test(P)) {
 		document.getElementById("upper").innerHTML = no;
+		flags[3] = "n";
 	} else {
 		document.getElementById("upper").innerHTML = yes;
+		flags[3] = "y";
 	}
 	if (!/[a-z]/.test(U) || !/[a-z]/.test(P)) {
 		document.getElementById("lower").innerHTML = no;
+		flags[4] = "n";
 	} else {
 		document.getElementById("lower").innerHTML = yes;
+		flags[4] = "y";
 	}
 	if (!/[0-9]/.test(U) || !/[0-9]/.test(P)) {
 		document.getElementById("num").innerHTML = no;
+		flags[5] = "n";
 	} else {
 		document.getElementById("num").innerHTML = yes;
+		flags[5] = "y";
 	}
 }
 
