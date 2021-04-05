@@ -9,9 +9,105 @@
     <meta name="author" content="Gavin Wurm">
     <link rel="stylesheet" href="../CSS/introStyles.css">
     <link rel="icon" href="../brandDesign/logo_icon.png">
+
+    <script type = "text/javascript" src = "g_start.js"></script>
+
+    <style type="text/css">
+        .img1 {position: absolute; z-index: 10;}
+        .img2 {position: absolute; z-index: 0;}
+        .img3 {position: absolute; z-index: 0;}
+        .img4 {position: absolute; z-index: 0;}
+        .img5 {position: absolute; z-index: 0;}
+
+    </style>
+
 </head> 
 
-<body>
+<body onload = "startTimer()">
+
+    <h1>Starting Out</h1>
+
+    <div>
+        <table border="2">
+            <tr>
+                <td>Videos</td>
+                <td>Documentation</td>
+            </tr>
+
+            <tr>
+                <td>To head over to our videos section click here! <br>
+                    <a href="article.html">
+                        <img src = "images_gs/videos_button.png"
+                            alt = "(Picture of videos_button)" width = "75" height = "75"/>
+                    </a>
+                </td>
+
+                <td>To head over to our documentation section click here! <br>
+                    <a href="article.html">
+                        <img src = "images_gs/documentation_button.png"
+                            alt = "(Picture of documentation_button)" width = "75" height = "75"/>
+                    </a>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>Practice</td>
+                <td>Projects</td>
+            </tr>
+
+            <tr>
+                <td>To head over to our practice section click here! <br>
+                    <a href="article.html">
+                        <img src = "images_gs/practice_button.png"
+                            alt = "(Picture of practice_button)" width = "75" height = "75"/>
+                    </a>
+                </td>
+
+                <td>To head over to our projects section click here! <br>
+                    <a href="article.html">
+                        <img src = "images_gs/projects_button.png"
+                            alt = "(Picture of projects_button)" width = "75" height = "75"/>
+                    </a>
+                </td>
+                
+            </tr>
+
+        </table>
+        <br>
+    </div>
+
+    <div id="slideshow">
+
+        <a href="article.html">
+        <img class = "img1"  id = "starting_out" src = "images_gs/starting_out.png"
+            alt = "(Picture of starting_out)" width = "640" height = "400"/>
+        </a>
+
+        <a href="article.html">
+        <img class = "img2"  id = "videos" src = "images_gs/videos.png"
+            alt = "(Picture of videos)" width = "640" height = "400"/>
+        </a>
+
+        <a href="article.html">
+        <img class = "img3"  id = "documentation" src = "images_gs/documentation.png"
+            alt = "(Picture of documentation)" width = "640" height = "400"/>
+        </a>
+        
+        <a href="article.html">
+        <img class = "img4"  id = "practice" src = "images_gs/practice.png"
+            alt = "(Picture of practice)" width = "640" height = "400"/>
+        </a>
+        
+        <a href="article.html">
+        <img class = "img5"  id = "projects" src = "images_gs/projects.png"
+            alt = "(Picture of projects)" width = "640" height = "400"/>
+        </a>
+
+    </div>
+
+    <br>
+    <br>
 
 </body>
 </html>
