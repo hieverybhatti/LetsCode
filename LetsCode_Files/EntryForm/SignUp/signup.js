@@ -18,6 +18,7 @@ function calculateValue() {
 }
 
 function checkStatus() {
+	flags = new Array("n", "n", "n", "n", "n", "n");
 	inputV = setInterval(checkInput, 100);
 }
 
