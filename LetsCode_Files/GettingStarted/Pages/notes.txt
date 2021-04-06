@@ -1,0 +1,11 @@
+> Each page have a directory inside PAGES to reach them, Pages/File/.html
+
+> Use ../ to move one directory up. Doing multiple times moves you up each folder
+
+> Pull from phase_4 branch then CREATE AND MOVE to your OWN branch. 
+    once you are done with your changes, ask if anyone made
+    changes to the phase_4 branch, if they did, PULL phase_4 FIRST then merge your changes to phase_4
+
+> Make sure to let everyone know when you merged with phase_4.
+
+> make sure to have a LINK to HOME in your page
