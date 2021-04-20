@@ -1,5 +1,20 @@
 
-<!DOCTYPE html>
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+//which cookie was set? based on that redirect it using that cookie 
+
+if (!isset($_COOKIE['visited'])) {
+SignUpPage();
+}
+
+
+function SignUpPage ()
+{
+$script = $_SERVER['PHP_SELF'];
+print <<<SIGNUP
 <html lang="en">
 
 <head>
@@ -29,8 +44,9 @@
         </nav>
     </header>
 <div class="content-area">
+<h1> Before you start please login below! </h1>
 <div class="signup-box">
-<form>
+<form method="post" action="$script">
 <table id="signup">
     <tr>
         <th>username:</th>
@@ -65,7 +81,7 @@
         <td><span class="check" id="special">&#10006;</span> no special character</td>
     </tr>
 </table>
-<input class="sign" type="button" value=" get started " onclick="calculateValue()"/>
+<input class="sign" type="button" name = "signup" value=" get started " onclick="calculateValue()"/>
 </form>
 </div>
 </div>
@@ -83,3 +99,26 @@
 
 </html>
 
+SIGNUP;
+}
+
+if (isset($_POST["signup"])){ //ONLY RUN AFTER SUBMIT HAS OCCURED
+    $visited = 'visited';
+    
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $userinfo = "$username:$password";
+    $file = file_get_contents("../passwd.txt");
+    if ($userinfo == ":" or $userinfo == "") {
+        echo "empty fields, try again";
+    }
+    else {
+        $fp = fopen('./passwd.txt', 'a');
+        fwrite($fp, $userinfo.'\n');  
+        fclose($fp);
+        setcookie('visited', $visited, time() + 20, "/");
+        header("Location:".$_COOKIE["redirect"]);
+    }
+    }
+
+?>

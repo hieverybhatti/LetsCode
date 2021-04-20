@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
+<?php>
+    if(!isset ($_COOKIE['visited']))
+    {
+      $redirect = "g_start.php";
+      setcookie("redirect", $redirect, time () + 30, "/");
+      header("Location: ../EntryForm/SignUp/signup.php");
+    }
+?>
+
 <head>
 	<title>Getting Started</title>
 	<meta charset="UTF-8">
@@ -20,6 +30,8 @@
         .img5 {z-index: 0;}
 
     </style>
+    
+
 </head> 
 
 <body onload = "startTimer()">
