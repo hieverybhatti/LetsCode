@@ -1,3 +1,8 @@
+<?php
+// make sure to rename to signup.php or signup checker.
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
