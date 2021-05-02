@@ -368,6 +368,23 @@ width:280px;
 }
 
 /*doc page*/
+.doc_nav {
+	float: left;
+	min-width: 150px;
+	margin-top: 20px;
+	font-size: 13pt;
+}
+.doc_nav table {
+	border-spacing: 25px;
+}
+
+.doc_info {
+	margin_left: 160px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	padding: 0px;
+	top: 20px;
+}
+
 .doc_title {
 	font-size: 30pt;
 	font-weight: bold;
@@ -377,8 +394,26 @@ width:280px;
 	width: 850px;
 }
 
+.doc_info-box {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 850px;
+	color: white;
+	padding: 1em;
+	padding-top: 1px;
+	background-color:#6ea4ed;
+}
+
+@media screen and (max-width: 1200px) {
+	.doc_info-box {
+		margin-left: 150px;
+	}
+}
+
 .doc {
 	font-size: 13pt;
+	padding: 1em;
 }
 
 .code {
