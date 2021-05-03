@@ -516,3 +516,17 @@ width:280px;
 .Field:hover .project {
   opacity: 1;
 }
+
+.thumbs {
+  background-color: white;
+  margin-left:auto; 
+  margin-right:auto;
+  text-align: center;
+  border-style:none;
+  
+  }
+
+.thumbs td {
+  text-align: center;
+  color: black;
+}
