@@ -1,15 +1,46 @@
+
 var inputV;
 var flag;
 var flags;
 var yes = "&#10004;";
 var no = "&#10006;";
+// later on have to change alerts to ajax 
 
+<<<<<<< Updated upstream
+=======
+function ajaxFunction() {
+	alert ("im inside");
+	var username = document.getElementById('U').value;
+	var password = document.getElementById('P').value;
+	var ajaxRequest; // The variable that makes Ajax possible!
+
+	ajaxRequest = new XMLHttpRequest();
+	ajaxRequest.onreadystatechange = function () {
+		if (ajaxRequest.readyState == 4) {
+			var ajaxDisplay = document.getElementById('ajaxDiv');
+			ajaxDisplay.innerHTML = ajaxRequest.responseText;
+		}
+	}
+	var queryString = "?username=" + username;
+
+	queryString += "&password=" + password;
+
+	alert("query string is done");
+
+	ajaxRequest.open("POST", "registering.php" + queryString, true);
+	ajaxRequest.send(null);
+}
+
+
+// if user name and password fields are filled...
+>>>>>>> Stashed changes
 function calculateValue() {
 	flag = true;
 	if (flags.includes("n")) {
 		flag = false;
 	}
 	if (flag == true) {
+		ajaxFunction();
 		clearInterval(inputV);
 		alert("User validated.");
 	} else {

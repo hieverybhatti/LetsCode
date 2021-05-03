@@ -305,12 +305,17 @@ width:280px;
 	margin-top: 2px;
 }
 
+#signin {
+  box-shadow: 500px 500px 300px rgba(31, 31, 31, 0.15);
+}
+
 #checker {
 	margin-left: 6%;
 	margin-top: 1em;
 	width: 90%;
 	font-size: 12pt;
 }
+
 
 .gs_box {
   display: block;
