@@ -4,6 +4,8 @@ var flags;
 var yes = "&#10004;";
 var no = "&#10006;";
 
+
+// later on have to change alerts to ajax 
 function calculateValue() {
 	flag = true;
 	if (flags.includes("n")) {
@@ -11,7 +13,6 @@ function calculateValue() {
 	}
 	if (flag == true) {
 		clearInterval(inputV);
-		alert("User validated.");
 	} else {
 		alert("User invalid.");
 	}

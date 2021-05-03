@@ -23,8 +23,8 @@ print <<<SIGNUP
     <meta name="description" content="Sign up page">
     <meta name="author" content="Yeonji/Lindsay Kim">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="../../CSS/introStyles.css">
-    <link rel="icon" href="../../brandDesign/logo_icon.png">
+    <link rel="stylesheet" href="../CSS/introStyles.css">
+    <link rel="icon" href="../brandDesign/logo_icon.png">
     <script src="signup.js" defer></script>
 </head>
 
@@ -33,14 +33,14 @@ print <<<SIGNUP
 
     <header class="nav-bar">
         <div class="logo-bar">
-            <a href="../../Home/home.html">
-                <img src="../../brandDesign/logo_icon.PNG" width="40px">
+            <a href="../Home/home.html">
+                <img src="../brandDesign/logo_icon.PNG" width="40px">
             </a>
         </div>
         <nav id="navbuttons">
-            <a href="../../GettingStarted/g_start.html">STARTING OUT</a>
+            <a href="../GettingStarted/g_start.html">STARTING OUT</a>
             <a href="signup.html">SIGN UP</a>
-            <a href="../../About/contact.html">ABOUT US</a>
+            <a href="../About/contact.html">ABOUT US</a>
         </nav>
     </header>
 <div class="content-area">
@@ -81,7 +81,7 @@ print <<<SIGNUP
         <td><span class="check" id="special">&#10006;</span> no special character</td>
     </tr>
 </table>
-<input class="sign" type="button" name = "signup" value=" get started " onclick="calculateValue()"/>
+<input class="sign" type="submit" name = "signup" value=" get started "/>
 </form>
 </div>
 </div>
@@ -104,21 +104,17 @@ SIGNUP;
 
 if (isset($_POST["signup"])){ //ONLY RUN AFTER SUBMIT HAS OCCURED
     $visited = 'visited';
-    
     $username = $_POST["username"];
     $password = $_POST["password"];
     $userinfo = "$username:$password";
-    $file = file_get_contents("../passwd.txt");
-    if ($userinfo == ":" or $userinfo == "") {
-        echo "empty fields, try again";
-    }
-    else {
-        $fp = fopen('./passwd.txt', 'a');
-        fwrite($fp, $userinfo.'\n');  
-        fclose($fp);
-        setcookie('visited', $visited, time() + 20, "/");
-        header("Location:".$_COOKIE["redirect"]);
-    }
-    }
+    $file = file_get_contents("./passwd.txt");
+    $fp = fopen('./passwd.txt', 'a');
+    fwrite($fp, $userinfo.'\n');  
+    fclose($fp);
+    echo "user registered";
+    setcookie('visited', $visited, time() + 20, "/");
+    // header("Location:".$_COOKIE["redirect"]);
+
+}
 
 ?>

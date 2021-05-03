@@ -102,6 +102,20 @@ footer {
 
 /* website info css */
 
+
+#ajaxDiv {
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f698ff2c;
+  width: 250px;
+  top: -450px;
+  padding: 0em 2em;
+  padding: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  margin: 4em auto;
+  box-shadow: 50px 50px 30px rgba(31, 31, 31, 0.15);
+}
 #aimTable {
   width: 1000px;
   border-spacing: 40px 60px;
