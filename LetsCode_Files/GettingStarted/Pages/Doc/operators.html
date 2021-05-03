@@ -40,44 +40,73 @@
 		<tr><td><a href="lists.html">Lists</a></td></tr>
 		<tr><td><a href="ifelse.html">If..Else</a></td></tr>
 		<tr><td><a href="loops.html">Loops</a></td></tr>
-		<tr><td>Class</td></tr>
+		<tr><td><a href="class.html">Class</a></td></tr>
 		</table>
 	</div>
 	<div class="doc_info">
-	<div class="doc_title">Documentation-Loops</div>
+	<div class="doc_title">Documentation-Operators</div>
         <div class="doc_info-box">
 		<div class="doc">
-			<p><b>Loops</b> are used to repeat certain part of the code.
-			<br>There are two types of loops: <b>for loops</b> and <b>while loops</b>.</p>
-            <p>A <i>for loop</i> is generally used when the code repeats for <u>a definite number of times</u>.
-			<br>A <i>while loop</i> is generally used when the code repeats until <u>a condition is met</u>.</p>
-			<table>
-			<tr>
-			<td>Example:</td>
-			<td></td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code">for x in range(3):<br>&nbsp; print("*")</td>
-			<td colspan="2" rowspan="2">These two loops will both have same result with "***" but with different approach.
-			<br>The for loop had a numeric range of repetition.
-			<br>On the other hand, the while loop had a condition of y < 3 which was met after repeating the loop 3 times.</td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code">y = 0<br>while (y < 3):<br>&nbsp; print("*")<br>&nbsp; y += 1</td>
-			<td></td>
-			<td></td>
-			</tr>
+			<p><b>Operators</b> are used to perform arithmetic or logical operations on variables and values, and there are different operators in Python.
+			</p>
+			<p><span class="subcategory">Arithmetic</span>
+			<br>Arithmetic operators are used to perform math.
+			<table class="doc_table">
+			<tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+			<tr><td>+</td><td>Addition</td><td>x + y</td></tr>
+			<tr><td>-</td><td>Subtraction</td><td>x - y</td></tr>
+			<tr><td>*</td><td>Multiplication</td><td>x * y</td></tr>
+			<tr><td>/</td><td>Division</td><td>x / y</td></tr>
+			<tr><td>//</td><td>Integer Division</td><td>x // y</td></tr>
+			<tr><td>%</td><td>Remainder</td><td>x % y</td></tr>
+			<tr><td>**</td><td>Exponentiation</td><td>x ** y</td></tr>
+			</table></p>
+			
+			<p><span class="subcategory">Comparison</span>
+			<br>Comparison operators are used to compare values.
+			The result of this comparison is a Boolean - <i>True</i> / <i>False</i>.
+			<table class="doc_table">
+			<tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+			<tr><td>==</td><td>Equal to</td><td>x == y</td></tr>
+			<tr><td>!=</td><td>Not Equal to</td><td>x != y</td></tr>
+			<tr><td>></td><td>Greater than</td><td>x > y</td></tr>
+			<tr><td>>=</td><td>Greater or Equal</td><td>x >= y</td></tr>
+			<tr><td><</td><td>Less than</td><td>x < y</td></tr>
+			<tr><td><=</td><td>Less or Equal</td><td>x <= y</td></tr>
+			</table></p>
+			
+			<p><span class="subcategory">Logical</span>
+			<br>Logical operators are used to combine different conditional statements.
+			<table class="doc_table">
+			<tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+			<tr><td>and</td><td>True if both statements are true</td><td>x and y</td></tr>
+			<tr><td>or</td><td>True if either statement is true</td><td>x or y</td></tr>
+			<tr><td>not</td><td>True if statement is false</td><td>not x</td></tr>
+			</table></p>
+			
+			<p><span class="subcategory">Bitwise</span>
+			<br>Bitwise operators apply only to interger types as they act on binary digits.
+			The result of this comparison is a Boolean - <i>True</i> / <i>False</i>.
+			<table class="doc_table">
+			<tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+			<tr><td>&</td><td>AND</td><td>x & y</td></tr>
+			<tr><td>|</td><td>OR</td><td>x | y</td></tr>
+			<tr><td>-</td><td>NOT</td><td>-x</td></tr>
+			<tr><td>^</td><td>XOR</td><td>x ^ y</td></tr>
+			<tr><td>>></td><td>right shift</td><td>x >> y</td></tr>
+			<tr><td><<</td><td>left shift</td><td>x << y</td></tr>
+			</table></p>
+			
+			<table style="width: 100%">
 			<tr>
 			<td colspan="2">for more information:</td>
 			<td></td>
 			<td></td>
 			</tr>
 			<tr>
-			<td><a href="https://www.geeksforgeeks.org/python-for-loops/"><img class="site" src="site_logos/gfg.PNG"></a></td>
-			<td><a href="https://www.w3schools.com/python/python_for_loops.asp"><img class="site" src="site_logos/w3.PNG"></a></td>
-			<td><a href="https://www.programiz.com/python-programming/for-loop"><img class="site" src="site_logos/programiz.PNG"></a></td>
+			<td><a href="https://www.geeksforgeeks.org/python-operators/"><img class="site" src="site_logos/gfg.PNG"></a></td>
+			<td><a href="https://www.w3schools.com/python/python_operators.asp"><img class="site" src="site_logos/w3.PNG"></a></td>
+			<td><a href="https://www.programiz.com/python-programming/operators"><img class="site" src="site_logos/programiz.PNG"></a></td>
 			</tr>
 			</table>
 		</div>
