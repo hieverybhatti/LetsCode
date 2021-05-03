@@ -44,45 +44,33 @@
 		</table>
 	</div>
 	<div class="doc_info">
-	<div class="doc_title">Documentation-Syntax</div>
+	<div class="doc_title">Documentation-Class</div>
         <div class="doc_info-box">
 		<div class="doc">
-			<p><b>Python</b> is one of the most common programming language used these days.
-			<br>It is loved by many people for its simple yet concise syntax.
-			Unlike many other languages including java and C that require the programmer to specify the type and assign a variable,
-			python interprets the value without having to specify the type, and because of its concise and compact design, Python is easy to read and write.
+			<p>A <b>class</b> is a description of a group of objects, 
+			and an <b>object</b> is a collection of variables and functions.
+			<br>To create a class, you begin with <i>class</i> instead of <i>def</i>.
+			Inside the class, <i>__init__()</i> function follows to initiate and assign values to object properties.
+			<div class="code" style="width: 100%">class Friends:<br>&nbsp; &nbsp; def __init__(self, name):
+			<br>&nbsp; &nbsp; &nbsp; &nbsp; self.name = name</div>
+			You can add functions inside the class after the values are assigned.
+			<div class="code" style="width: 100%">class Friends:<br>&nbsp; &nbsp; def __init__(self, name):
+			<br>&nbsp; &nbsp; &nbsp; &nbsp; self.name = name
+			<br>&nbsp; &nbsp; def welcome(self):
+			<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Hellow my friend, " + self.name)
+			<br>friend1 = Friends("John")<br>friend1.welcome()</div>
+			By doing so, an object(friend) named "John" is created, and the welcome function is executed.
 			</p>
-			<p>There are two ways to use Python.
-			<br>First, you may write the code <u>directly in command line, followed by >>>.</u>
-			<div class="code"> >>> print ("Hello World!")<br> Hello World!</div>
-			<br>Second, you may <u>create a file that ends with <i>.py</i> extension</u> for longer programs.
-			<br>To run the program, you will type <i>python (filename).py</i> in command line.
-			</p>
-			<p>One unique feature about Python is that <b>indentation matters</b>.
-			<br>Instead of brackets, indentation is used to divide and sort the blocks of code.
-			</p>
-			<table>
-			<tr>
-			<td class="code" style="width: 200px">x = 2<br> if (x == 3):<br> &nbsp; print("x is 3.")</td>
-			<td colspan="2">Correct syntax</td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code" style="width: 200px">x = 2<br> if (x == 3):<br> print("x is 3.")</td>
-			<td colspan="2">No indentation, therefore will be a syntax error.</td>
-			<td></td>
-			</tr>
-			</table>
-			<table style="width:100%">
+			<table style="width: 100%">
 			<tr>
 			<td colspan="2">for more information:</td>
 			<td></td>
 			<td></td>
 			</tr>
 			<tr>
-			<td><a href="https://www.geeksforgeeks.org/python-language-introduction/"><img class="site" src="site_logos/gfg.PNG"></a></td>
-			<td><a href="https://www.w3schools.com/python/python_syntax.asp"><img class="site" src="site_logos/w3.PNG"></a></td>
-			<td><a href="https://www.programiz.com/python-programming/first-program"><img class="site" src="site_logos/programiz.PNG"></a></td>
+			<td><a href="https://www.geeksforgeeks.org/python-for-loops/"><img class="site" src="site_logos/gfg.PNG"></a></td>
+			<td><a href="https://www.w3schools.com/python/python_for_loops.asp"><img class="site" src="site_logos/w3.PNG"></a></td>
+			<td><a href="https://www.programiz.com/python-programming/for-loop"><img class="site" src="site_logos/programiz.PNG"></a></td>
 			</tr>
 			</table>
 		</div>

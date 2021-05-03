@@ -40,44 +40,51 @@
 		<tr><td><a href="lists.html">Lists</a></td></tr>
 		<tr><td><a href="ifelse.html">If..Else</a></td></tr>
 		<tr><td><a href="loops.html">Loops</a></td></tr>
-		<tr><td>Class</td></tr>
+		<tr><td><a href="class.html">Class</a></td></tr>
 		</table>
 	</div>
 	<div class="doc_info">
-	<div class="doc_title">Documentation-Loops</div>
+	<div class="doc_title">Documentation-If...Else</div>
         <div class="doc_info-box">
 		<div class="doc">
-			<p><b>Loops</b> are used to repeat certain part of the code.
-			<br>There are two types of loops: <b>for loops</b> and <b>while loops</b>.</p>
-            <p>A <i>for loop</i> is generally used when the code repeats for <u>a definite number of times</u>.
-			<br>A <i>while loop</i> is generally used when the code repeats until <u>a condition is met</u>.</p>
+			<p><b>If statments</b> are used to check conditions and decide whether part of the code will be runned or not.
+			If the condition is met, a block of code will be executed.
+			<div class="code">if <i>condition</i>:<br>&nbsp; &nbsp; statement1<br>statement2</div>
+			Statement 2 will always be executed, whereas statement 1 will only be executed if <i>condition</i> is true
+			</p>
+			<p><b>Else statements</b>can be added to execute a block of code when the condition is <u>not met</u>.
+			<div class="code">if <i>condition</i>:<br>&nbsp; &nbsp; statement1
+			<br>else:<br>&nbsp; &nbsp; statement2</div>
+			Statment 1 will be executed if the <i>condition</i> is true, and statement 2 will be executed if false.
+			</p>
+			<p>You may want to add more than 2 conditions. In that case, you can use <b>elif statment</b>.
+			Elif is short for saying "else if", and it is used after <i>if</i> and before <i>else</i>.
+			<div class="code">if <i>condition1</i>:<br>&nbsp; &nbsp; statement1
+			<br>elif <i>condition2</i>:<br>&nbsp; &nbsp; statement2
+			<br>else:<br>&nbsp; &nbsp; statement3</div>
+			You may have as many elif condition as you would like.
+			</p>
 			<table>
-			<tr>
-			<td>Example:</td>
-			<td></td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code">for x in range(3):<br>&nbsp; print("*")</td>
-			<td colspan="2" rowspan="2">These two loops will both have same result with "***" but with different approach.
-			<br>The for loop had a numeric range of repetition.
-			<br>On the other hand, the while loop had a condition of y < 3 which was met after repeating the loop 3 times.</td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code">y = 0<br>while (y < 3):<br>&nbsp; print("*")<br>&nbsp; y += 1</td>
-			<td></td>
-			<td></td>
-			</tr>
+			<tr><td class="code">Input:<br><br>x = 1<br>y = 2<br>z = 3
+			<br>if x == 1:<br>&nbsp; &nbsp; print("x is 1.")
+			<br>elif y == 2:<br>&nbsp;&nbsp; print("y is 2.")
+			<br>else:<br>&nbsp; &nbsp; print("Something is wrong!")
+			<br>if z == 3:<br>&nbsp; &nbsp; print("z is 3.")
+			</td>
+			<td class="code" style="vertical-align: top">Output:<br><br>
+			x is 1.<br> z is 3.</td></tr>
+			</table>
+			<br>
+			<table styel="width: 100%">
 			<tr>
 			<td colspan="2">for more information:</td>
 			<td></td>
 			<td></td>
 			</tr>
 			<tr>
-			<td><a href="https://www.geeksforgeeks.org/python-for-loops/"><img class="site" src="site_logos/gfg.PNG"></a></td>
-			<td><a href="https://www.w3schools.com/python/python_for_loops.asp"><img class="site" src="site_logos/w3.PNG"></a></td>
-			<td><a href="https://www.programiz.com/python-programming/for-loop"><img class="site" src="site_logos/programiz.PNG"></a></td>
+			<td><a href="https://www.geeksforgeeks.org/python-if-else/?ref=lbp"><img class="site" src="site_logos/gfg.PNG"></a></td>
+			<td><a href="https://www.w3schools.com/python/python_conditions.asp"><img class="site" src="site_logos/w3.PNG"></a></td>
+			<td><a href="https://www.programiz.com/python-programming/if-elif-else"><img class="site" src="site_logos/programiz.PNG"></a></td>
 			</tr>
 			</table>
 		</div>

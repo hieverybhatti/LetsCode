@@ -436,7 +436,15 @@ width:280px;
 	padding-top: 1em;
 }
 
+.subcategory {
+	font-weight: bold;
+	font-size: 17pt;
+}
 
+.doc_table {
+	min-width: 50%;
+	border-spacing: 3px;
+}
 
 .Projects{
 
