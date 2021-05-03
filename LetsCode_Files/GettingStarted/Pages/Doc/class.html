@@ -44,31 +44,24 @@
 		</table>
 	</div>
 	<div class="doc_info">
-	<div class="doc_title">Documentation-Operators</div>
+	<div class="doc_title">Documentation-Class</div>
         <div class="doc_info-box">
 		<div class="doc">
-			<p><b>Operators</b> are used to repeat certain part of the code.
-			<br>There are two types of loops: <b>for loops</b> and <b>while loops</b>.</p>
-            <p>A <i>for loop</i> is generally used when the code repeats for <u>a definite number of times</u>.
-			<br>A <i>while loop</i> is generally used when the code repeats until <u>a condition is met</u>.</p>
-			<table>
-			<tr>
-			<td>Example:</td>
-			<td></td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code">for x in range(3):<br>&nbsp; print("*")</td>
-			<td colspan="2" rowspan="2">These two loops will both have same result with "***" but with different approach.
-			<br>The for loop had a numeric range of repetition.
-			<br>On the other hand, the while loop had a condition of y < 3 which was met after repeating the loop 3 times.</td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code">y = 0<br>while (y < 3):<br>&nbsp; print("*")<br>&nbsp; y += 1</td>
-			<td></td>
-			<td></td>
-			</tr>
+			<p>A <b>class</b> is a description of a group of objects, 
+			and an <b>object</b> is a collection of variables and functions.
+			<br>To create a class, you begin with <i>class</i> instead of <i>def</i>.
+			Inside the class, <i>__init__()</i> function follows to initiate and assign values to object properties.
+			<div class="code" style="width: 100%">class Friends:<br>&nbsp; &nbsp; def __init__(self, name):
+			<br>&nbsp; &nbsp; &nbsp; &nbsp; self.name = name</div>
+			You can add functions inside the class after the values are assigned.
+			<div class="code" style="width: 100%">class Friends:<br>&nbsp; &nbsp; def __init__(self, name):
+			<br>&nbsp; &nbsp; &nbsp; &nbsp; self.name = name
+			<br>&nbsp; &nbsp; def welcome(self):
+			<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Hellow my friend, " + self.name)
+			<br>friend1 = Friends("John")<br>friend1.welcome()</div>
+			By doing so, an object(friend) named "John" is created, and the welcome function is executed.
+			</p>
+			<table style="width: 100%">
 			<tr>
 			<td colspan="2">for more information:</td>
 			<td></td>
