@@ -6,8 +6,6 @@ var yes = "&#10004;";
 var no = "&#10006;";
 // later on have to change alerts to ajax 
 
-<<<<<<< Updated upstream
-=======
 function ajaxFunction() {
 	alert ("im inside");
 	var username = document.getElementById('U').value;
@@ -33,7 +31,6 @@ function ajaxFunction() {
 
 
 // if user name and password fields are filled...
->>>>>>> Stashed changes
 function calculateValue() {
 	flag = true;
 	if (flags.includes("n")) {
