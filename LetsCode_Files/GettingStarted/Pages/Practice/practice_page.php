@@ -596,7 +596,7 @@
         </div>
         <nav id="navbuttons">
             <a href="../../g_start.html">STARTING OUT</a>
-            <a href="../../../EntryForm/SignUp/signup.html">SIGN UP</a>
+            <a href="../../../EntryForm/signup.html">SIGN UP</a>
             <a href="../../../About/contact.html">ABOUT US</a>
         </nav>
     </header>

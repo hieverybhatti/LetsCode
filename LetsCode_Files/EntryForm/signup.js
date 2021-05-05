@@ -8,10 +8,11 @@ var no = "&#10006;";
 
 function ajaxFunction() {
 	alert ("im inside");
+	// var username = "";
 	var username = document.getElementById('U').value;
 	var password = document.getElementById('P').value;
 	var ajaxRequest; // The variable that makes Ajax possible!
-
+	// echo these above statements 
 	ajaxRequest = new XMLHttpRequest();
 	ajaxRequest.onreadystatechange = function () {
 		if (ajaxRequest.readyState == 4) {

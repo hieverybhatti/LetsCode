@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<?php>
-    if(!isset ($_COOKIE['visited']))
-    {
-      $redirect = "g_start.php";
-      setcookie("redirect", $redirect, time () + 30, "/");
-      header("Location: ../EntryForm/SignUp/signup.php");
-    }
-?>
-
 <head>
 	<title>Getting Started</title>
 	<meta charset="UTF-8">
@@ -30,8 +20,6 @@
         .img5 {z-index: 0;}
 
     </style>
-    
-
 </head> 
 
 <body onload = "startTimer()">
@@ -74,7 +62,7 @@
                 </td>
 
                 <td>To head over to our documentation section click here! <br>
-                    <a href="Pages/Doc/doc_page.html">
+                    <a href="Pages/Doc/syntax.html">
                         <img src = "images_gs/documentation_button.png"
                             alt = "(Picture of documentation_button)" width = "75" height = "75"/>
                     </a>
@@ -89,7 +77,7 @@
 
             <tr>
                 <td>To head over to our practice section click here! <br>
-                    <a href="Pages/Practice/practice_page.html">
+                    <a href="Pages/Practice/practice_page.php">
                         <img src = "images_gs/practice_button.png"
                             alt = "(Picture of practice_button)" width = "75" height = "75"/>
                     </a>
@@ -125,7 +113,7 @@
                 alt = "(Picture of documentation)" width = "700" height = "400"/>
             </a>
             
-            <a href="Pages/Practice/practice_page.html">
+            <a href="Pages/Practice/practice_page.php">
             <img class = "img4"  id = "practice" src = "images_gs/practice.png"
                 alt = "(Picture of practice)" width = "700" height = "400"/>
             </a>
