@@ -85,7 +85,7 @@
         <td><span class="check" id="special">&#10006;</span> no special character</td>
     </tr>
 </table>
-<input class="sign" id = "subm" type= "button" name = "signup" value=" get started " onclick="calculateValue(); ajaxFunction();"/>
+<input class="sign" id = "subm" type= "button" name = "signup" value=" get started " onclick="calculateValue(); ajaxFunction('$server','$user','$pwd','$dbName');"/>
 </form>
 SIGNUP;
 

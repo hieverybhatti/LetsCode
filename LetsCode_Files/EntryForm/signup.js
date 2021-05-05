@@ -5,7 +5,10 @@ var flags;
 var yes = "&#10004;";
 var no = "&#10006;";
 // later on have to change alerts to ajax 
-
+//  var server = "spring-2021.cs.utexas.edu";
+//     var user = "cs329e_bulko_haris";
+//     var pwd = "Along+turk\$worthy";
+//     var dbName = "cs329e_bulko_haris";
 function ajaxFunction() {
 	alert ("im inside");
 	// var username = "";
