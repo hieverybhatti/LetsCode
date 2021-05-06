@@ -5,12 +5,13 @@ var flags;
 var yes = "&#10004;";
 var no = "&#10006;";
 // later on have to change alerts to ajax 
-//  var server = "spring-2021.cs.utexas.edu";
-//     var user = "cs329e_bulko_haris";
-//     var pwd = "Along+turk\$worthy";
-//     var dbName = "cs329e_bulko_haris";
+var server = "spring-2021.cs.utexas.edu";
+var user = "cs329e_bulko_haris";
+var pwd = "Along+turk\$worthy";
+var dbName = "cs329e_bulko_haris";
+
 function ajaxFunction() {
-	alert ("im inside");
+	alert("im inside");
 	// var username = "";
 	var username = document.getElementById('U').value;
 	var password = document.getElementById('P').value;
@@ -25,11 +26,11 @@ function ajaxFunction() {
 	}
 	var queryString = "?username=" + username;
 
-	queryString += "&password=" + password;
+	queryString += "&password=" + password + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
 
 	alert("query string is done");
 
-	ajaxRequest.open("POST", "registering.php" + queryString, true);
+	ajaxRequest.open("GET", "registering.php" + queryString, true);
 	ajaxRequest.send(null);
 }
 
@@ -41,9 +42,9 @@ function calculateValue() {
 		flag = false;
 	}
 	if (flag == true) {
-		ajaxFunction();
 		clearInterval(inputV);
 		alert("User validated.");
+		ajaxFunction();
 	} else {
 		alert("User invalid.");
 	}
@@ -126,4 +127,6 @@ function resetValue() {
 	document.getElementById("U").value = "";
 	document.getElementById("P").value = "";
 	document.getElementById("R").value = "";
+	flags = Array("n", "n", "n", "n", "n", "n");
+
 }

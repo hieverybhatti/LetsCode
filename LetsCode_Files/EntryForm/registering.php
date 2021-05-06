@@ -25,8 +25,8 @@
    $mysqli->select_db($dbName) or die($mysqli->error);
    
    // Retrieve data from Query String
-   $username = $_POST['username'];
-   $password = $_POST['password'];
+   $username = $_GET['username'];
+   $password = $_GET['password'];
    
    // Escape User Input to help prevent SQL Injection
    $username = $mysqli->real_escape_string($username);

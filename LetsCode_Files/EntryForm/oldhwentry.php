@@ -79,13 +79,14 @@
     <tr>
         <td><span class="check" id="num">&#10006;</span> one number</td>
         <td><span class="check" id="six">&#10006;</span> 6 characters minimum</td>
+        <td> hello </td>
     </tr>
     <tr>
         <td><span class="check" id="match">&#10006;</span> passwords match</td>
         <td><span class="check" id="special">&#10006;</span> no special character</td>
     </tr>
 </table>
-<input class="sign" id = "subm" type= "button" name = "signup" value=" get started " onclick="calculateValue(); ajaxFunction('$server','$user','$pwd','$dbName');"/>
+<input class="sign" id = "subm" type= "button" name = "signup" value=" get started " onclick="calculateValue(); resetValue();"/>
 </form>
 SIGNUP;
 
