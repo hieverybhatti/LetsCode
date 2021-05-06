@@ -18,7 +18,7 @@
     <header class="nav-bar">
         <div class="logo-bar">
             <a href="../../../Home/home.html">
-                <img src="../../../brandDesign/logo_icon.PNG" width="40px">
+                <img src="../../../brandDesign/logo_icon.png" width="40px">
             </a>
         </div>
         <nav id="navbuttons">
@@ -49,40 +49,40 @@
 		</table>
 	</div>
 	<div class="doc_info">
-	<div class="doc_title">Documentation-Loops</div>
+	<div class="doc_title">Documentation-Strings</div>
         <div class="doc_info-box">
 		<div class="doc">
-			<p><b>Loops</b> are used to repeat certain part of the code.
-			<br>There are two types of loops: <b>for loops</b> and <b>while loops</b>.</p>
-            <p>A <i>for loop</i> is generally used when the code repeats for <u>a definite number of times</u>.
-			<br>A <i>while loop</i> is generally used when the code repeats until <u>a condition is met</u>.</p>
-			<table>
-			<tr>
-			<td>Example:</td>
-			<td></td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code">for x in range(3):<br>&nbsp; print("*")</td>
-			<td colspan="2" rowspan="2">These two loops will both have same result with "***" but with different approach.
-			<br>The for loop had a numeric range of repetition.
-			<br>On the other hand, the while loop had a condition of y < 3 which was met after repeating the loop 3 times.</td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code">y = 0<br>while (y < 3):<br>&nbsp; print("*")<br>&nbsp; y += 1</td>
-			<td></td>
-			<td></td>
-			</tr>
+			<p><b>Strings</b> are sequence of characters and can be created using single or double quotes.
+			<div class="code" style="width:100%">a = "Hello"<br>b = 'Hello'</div>
+			To assign multiline string to a variable, you can use <b>"""</b> or <b>'''</b>.
+			<br><br><div class="code" style="width:100%">c = """The violets are blue,
+			<br>the roses are red,
+			<br>the violets are blue,
+			<br>I love my loves."""</div>
+			You can access characters in a string using <u>index</u>.
+			<br><br><div class="code" style="width:100%">a = "Hello"<br>print(a[1])</div>
+			The following code will print "e".<br>You can also get the length of a string with <b>len()</b> function.
+			<br><br><div class="code" style="width:100%">a = "Goodbye!"<br>len(a)</div>
+			You may concatenate two strings using <b>+</b> and repeat using <b>*</b>.
+			<br><br><div class="code" style="width:100%">a = "Hello" + "John"<br>b = "Goodbye"
+			<br>c = a + b * 2</div>
+			<i>a</i> would be "HelloJohn" and <i>c</i> would be "HelloJohnGoodbyeGoodbye".
+			<br><br>Similarly, you can slice a string into substrings by using <b>:</b>.
+			<br><br><div class="code" style="width:100%">a = "HelloJohn"
+			<br>b = a[0:4]</div>
+			<i>b</i> would be "Hello".
+			</p>
+			</table>
+			<table style="width:100%">
 			<tr>
 			<td colspan="2">for more information:</td>
 			<td></td>
 			<td></td>
 			</tr>
 			<tr>
-			<td><a href="https://www.geeksforgeeks.org/python-for-loops/"><img class="site" src="site_logos/gfg.png"></a></td>
-			<td><a href="https://www.w3schools.com/python/python_for_loops.asp"><img class="site" src="site_logos/w3.png"></a></td>
-			<td><a href="https://www.programiz.com/python-programming/for-loop"><img class="site" src="site_logos/programiz.png"></a></td>
+			<td><a href="https://www.geeksforgeeks.org/python-strings/"><img class="site" src="site_logos/gfg.png"></a></td>
+			<td><a href="https://www.w3schools.com/python/python_strings.asp"><img class="site" src="site_logos/w3.png"></a></td>
+			<td><a href="https://www.programiz.com/python-programming/string"><img class="site" src="site_logos/programiz.png"></a></td>
 			</tr>
 			</table>
 		</div>
@@ -91,7 +91,7 @@
     <footer>
 
             <div id="leftfoot"> &#169; Haris Bhatti, Gavin Wurm, Yeonji Kim, Francesc Aguilar Lite</div>
-            <div id="rightfoot">3/10/2021</div>
+            <div id="rightfoot">5/06/2021</div>
     
     </footer>
 </body>

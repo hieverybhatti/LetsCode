@@ -15,6 +15,7 @@ caption  {
 
 footer {
   margin: 0 auto;
+  margin-top: 1em;
   width: 85%;
   text-align: center;
   border-top: 1px solid #fff;
@@ -408,16 +409,11 @@ width:280px;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 850px;
+	min-width: 600px;
 	color: white;
 	padding: 1em;
 	padding-top: 1px;
 	background-color:#6ea4ed;
-}
-
-@media screen and (max-width: 1200px) {
-	.doc_info-box {
-		margin-left: 150px;
-	}
 }
 
 .doc {
