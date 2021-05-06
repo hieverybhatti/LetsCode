@@ -29,6 +29,7 @@ function ajaxFunction() {
 	queryString += "&password=" + password + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
 
 	alert("query string is done");
+	alert ("the user name and pass is" + username + password);
 
 	ajaxRequest.open("GET", "registering.php" + queryString, true);
 	ajaxRequest.send(null);
@@ -125,6 +126,16 @@ function checkContain(x) {
 
 // clears all text fields
 function resetValue() {
-
+	// document.getElementById("U").value = "";
+	// document.getElementById("P").value = "";
+	// document.getElementById("R").value = "";
+	// document.getElementById("signupform").reset();
+	// document.getElementById("six").innerHTML = no;
+	// document.getElementById("match").innerHTML = no;
+	// document.getElementById("special").innerHTML = no;
+	// document.getElementById("upper").innerHTML = no;
+	// document.getElementById("lower").innerHTML = no;
+	// document.getElementById("num").innerHTML = no;
+	// flags = new Array("n", "n", "n", "n", "n", "n");
 
 }

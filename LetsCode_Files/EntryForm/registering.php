@@ -8,12 +8,8 @@
    $pwd = "Along+turk\$worthy";
    $dbName = "cs329e_bulko_haris";
    $mysqli = new mysqli($server, $user, $pwd, $dbName);
-
 //    print just to confirm they got passed correctly
-//    echo "Server: <code>".$server."</code><br>";
-//    echo "User: <code>".$user."</code><br>";
-//    echo "Database name: <code>".$dbName."</code><br><br>";
-   
+
    // Connect to MySQL Server
    if ($mysqli->connect_errno) {
       die('Connect Error: ' . $mysqli->connect_errno . ": " .  $mysqli->connect_error);
@@ -38,7 +34,9 @@
    $query = "SELECT user, pass FROM letscode WHERE user = '$username' AND pass = '$password'";
 //    $query2 = "SELECT username FROM passwords WHERE username = '$username'";
    //Execute query
-//    echo "<code>...Executing query</code><br><br>";
+   echo "<code>...Executing query</code><br><br>";
+   echo'<script>alert("You are not logged, please sign in")</script>';
+   echo $query;
    $result = $mysqli->query($query) or die($mysqli->error);
 //    $result2 =$mysqli->query($query2) or die($mysqli->error);
 
@@ -47,6 +45,8 @@
     if ($total_rows>=1)
     {
         echo "User and password confirmed, Welcome Back " . $username;
+	setcookie("signedin",$username,time()+120);
+   echo "You will be redirected back to the Getting Started Page in 3 seconds" ;
     }
     else {
         $insertcommand = "INSERT INTO letscode VALUES ('$username','$password')";

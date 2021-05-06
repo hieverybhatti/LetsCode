@@ -97,7 +97,7 @@ SIGNUP;
     </div>
 
     <br>
-    <div id="ajaxDiv"> Your confirmation will show up here.</div>
+    <div class="ajaxDiv"> Your confirmation will show up here.</div>
 
 
 

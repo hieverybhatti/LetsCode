@@ -80,11 +80,11 @@
             // echo "Database name: <code>" . $dbName . "</code><br>";
 
             print <<<FORM
-            <form id = "signin">
+            <form id = "signin" class ="sign">
                 <center>
                     <h1 style="font-size: 45px;"> LOGIN </h1>
                 </center>
-                <table id="signup">
+                <table id="signin">
                     <tr>
                         <th>username:</th>
                     </tr>
@@ -106,7 +106,7 @@ FORM;
         </div>
     </div>
 
-    <div id="ajaxDiv"> Your confirmation will show up here.</div>
+    <div class="ajaxDiv"> Your confirmation will show up here.</div>
     <br>
     <br>
     <br>
