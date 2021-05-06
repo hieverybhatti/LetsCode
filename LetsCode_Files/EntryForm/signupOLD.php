@@ -1,3 +1,20 @@
+
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+//which cookie was set? based on that redirect it using that cookie 
+
+if (!isset($_COOKIE['visited'])) {
+SignUpPage();
+}
+
+
+function SignUpPage ()
+{
+$script = $_SERVER['PHP_SELF'];
+print <<<SIGNUP
 <html lang="en">
 
 <head>
@@ -6,51 +23,30 @@
     <meta name="description" content="Sign up page">
     <meta name="author" content="Yeonji/Lindsay Kim">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="../CSS/introStyles.css">
-    <link rel="icon" href="../brandDesign/logo_icon.png">
+    <link rel="stylesheet" href="../../CSS/introStyles.css">
+    <link rel="icon" href="../../brandDesign/logo_icon.png">
     <script src="signup.js" defer></script>
 </head>
 
-
-
-<body onload = "checkStatus()">
-    <?php
-
-    $server = "spring-2021.cs.utexas.edu";
-    $user = "cs329e_bulko_haris";
-    $pwd = "Along+turk\$worthy";
-    $dbName = "cs329e_bulko_haris";
-    $mysqli = new mysqli($server, $user, $pwd, $dbName);
-
-    if ($mysqli->connect_errno) {
-        die('Connect Error: ' . $mysqli->connect_errno .
-            ": " . $mysqli->connect_error);
-    }
-    // echo "Server: <code>" . $server . "</code><br>";
-    // echo "User: <code>" . $user . "</code><br>";
-    // echo "Database name: <code>" . $dbName . "</code><br>";
-
-    print <<<SIGNUP
-
-<!--navigation bar-->
+<body onload="checkStatus()">
+    <!--navigation bar-->
 
     <header class="nav-bar">
         <div class="logo-bar">
-            <a href="../Home/home.html">
-                <img src="../brandDesign/logo_icon.PNG" width="40px">
+            <a href="../../Home/home.html">
+                <img src="../../brandDesign/logo_icon.PNG" width="40px">
             </a>
         </div>
         <nav id="navbuttons">
-            <a href="../GettingStarted/g_start.html">STARTING OUT</a>
+            <a href="../../GettingStarted/g_start.php">STARTING OUT</a>
             <a href="signup.html">SIGN UP</a>
-            <a href="../About/contact.html">ABOUT US</a>
+            <a href="../../About/contact.html">ABOUT US</a>
         </nav>
     </header>
 <div class="content-area">
-<center> <h1> To Get Started Please Sign Up Below! </h1> </center>
+<h1> Before you start please login below! </h1>
 <div class="signup-box">
-<form method="post">
-
+<form method="post" action="$script">
 <table id="signup">
     <tr>
         <th>username:</th>
@@ -79,38 +75,50 @@
     <tr>
         <td><span class="check" id="num">&#10006;</span> one number</td>
         <td><span class="check" id="six">&#10006;</span> 6 characters minimum</td>
-        <td> hello </td>
     </tr>
     <tr>
         <td><span class="check" id="match">&#10006;</span> passwords match</td>
         <td><span class="check" id="special">&#10006;</span> no special character</td>
     </tr>
 </table>
-<input class="sign" id = "subm" type= "button" name = "signup" value=" get started " onclick="calculateValue(); resetValue();"/>
+<input class="sign" type="button" name = "signup" value=" get started " onclick="calculateValue()"/>
 </form>
-SIGNUP;
-
-    ?>
-
-
-
-    </div>
-    </div>
-
-    <br>
-    <div id="ajaxDiv"> Your confirmation will show up here.</div>
-
+</div>
+</div>
 
 
     <footer>
-        <br>
-        <br>
-        <br>
+
         <div id="leftfoot"> &#169; Haris Bhatti, Gavin Wurm, Yeonji Kim, Francesc Aguilar Lite</div>
         <div id="rightfoot">3/10/2021</div>
 
     </footer>
-
 </body>
 
+
+
 </html>
+
+SIGNUP;
+}
+
+if (isset($_POST["signup"])){ //ONLY RUN AFTER SUBMIT HAS OCCURED
+    $visited = 'visited';
+    
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $userinfo = "$username:$password";
+    $file = file_get_contents("../passwd.txt");
+    if ($userinfo == ":" or $userinfo == "") {
+        echo "empty fields, try again";
+    }
+    else {
+        $fp = fopen('./passwd.txt', 'a');
+        fwrite($fp, $userinfo.'\n');  
+        fclose($fp);
+        setcookie('visited', $visited, time() + 20, "/");
+        header("Location:".$_COOKIE["redirect"]);
+    }
+    }
+
+?>

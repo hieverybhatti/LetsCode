@@ -42,9 +42,10 @@ function calculateValue() {
 		flag = false;
 	}
 	if (flag == true) {
-		clearInterval(inputV);
+		// clearInterval(inputV);
 		alert("User validated.");
 		ajaxFunction();
+		location.replace("signin.php");
 	} else {
 		alert("User invalid.");
 	}
@@ -124,9 +125,6 @@ function checkContain(x) {
 
 // clears all text fields
 function resetValue() {
-	document.getElementById("U").value = "";
-	document.getElementById("P").value = "";
-	document.getElementById("R").value = "";
-	flags = Array("n", "n", "n", "n", "n", "n");
+
 
 }
