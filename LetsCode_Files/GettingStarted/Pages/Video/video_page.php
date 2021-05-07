@@ -13,9 +13,9 @@
 </head>
 
 <?php
-if(!isset($_COOKIE["signedin"])){
+if (!isset($_COOKIE["signedin"])) {
     $redirect = "Home/home.php";
-    setcookie("redirect",$redirect,time()+120,"/");
+    setcookie("redirect", $redirect, time() + 120, "/");
     header("Location: ../../../EntryForm/signin.php");
 }
 ?>
@@ -38,30 +38,30 @@ if(!isset($_COOKIE["signedin"])){
 
     <!--end of navigation bar -->
     <br><br><br>
-<div class ="wrapper">
-    <div class = "info-box">
-        <div id ="csdojo">
+    <div class="wrapper">
+        <div class="info-box">
+            <div id="csdojo">
 
-        
-        <h2> Here are some playlists to get you started</h2>
-        
-        <h4>CS DOJO</h4>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Z1Yd7upQsXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p> From a head programmer at google to now teaching python on Youtube, CS DOJO is a person who is very passionate about what coding and welcomes new coders with open arms.</p>
-    </div>
-    <div id ="Telusko">
-        <h4>Telusko</h4>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/QXeEoD0pB3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p> Fast and simple is what Telusko is known for with his tutorial videos. Join him as he spends around 3-5 minutes per video in terms of teaching the basics of python.</p>
-    </div>
-    </div>
-    
-    <footer>
 
-        <div id="leftfoot"> &#169; Haris Bhatti, Gavin Wurm, Yeonji Kim, Francesc Aguilar Lite</div>
-        <div id="rightfoot">3/10/2021</div>
+                <h2> Here are some playlists to get you started</h2>
 
-    </footer>
+                <h4>CS DOJO</h4>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z1Yd7upQsXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p> From a head programmer at google to now teaching python on Youtube, CS DOJO is a person who is very passionate about what coding and welcomes new coders with open arms.</p>
+            </div>
+            <div id="Telusko">
+                <h4>Telusko</h4>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QXeEoD0pB3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p> Fast and simple is what Telusko is known for with his tutorial videos. Join him as he spends around 3-5 minutes per video in terms of teaching the basics of python.</p>
+            </div>
+        </div>
+
+        <footer>
+
+            <div id="leftfoot"> &#169; Haris Bhatti, Gavin Wurm, Yeonji Kim, Francesc Aguilar Lite</div>
+            <div id="rightfoot">3/10/2021</div>
+
+        </footer>
 </body>
 
 </html>

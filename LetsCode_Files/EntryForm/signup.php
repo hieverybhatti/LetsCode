@@ -42,7 +42,7 @@
         </div>
         <nav id="navbuttons">
             <a href="../GettingStarted/g_start.php">STARTING OUT</a>
-            <a href="signup.html">SIGN UP</a>
+            <a href="signup.php">SIGN UP</a>
             <a href="../About/contact.html">ABOUT US</a>
         </nav>
     </header>

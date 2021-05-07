@@ -37,7 +37,7 @@
 
 <?php
 if(!isset($_COOKIE["signedin"])){
-    $redirect = "Home/home.php";
+    $redirect = "../GettingStarted/g_start.php";
     setcookie("redirect",$redirect,time()+120,"/");
     header("Location: ../EntryForm/signin.php");
 }
@@ -54,7 +54,7 @@ if(!isset($_COOKIE["signedin"])){
             </div>
             <nav id="navbuttons">
                 <a href="../GettingStarted/g_start.php">STARTING OUT</a>
-                <a href="../EntryForm/SignUp/signup.php">SIGN UP</a>
+                <a href="../EntryForm/signup.php">SIGN UP</a>
                 <a href="../About/contact.html">ABOUT US</a>
             </nav>
         </header>

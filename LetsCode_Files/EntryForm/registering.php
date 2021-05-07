@@ -46,8 +46,7 @@
     {
       echo "User and password confirmed, Welcome Back " . $username;
       echo "You will be redirected back to the Getting Started Page in 3 seconds" ;
-	   setcookie("signedin",$username,time()+120);
-      echo $_COOKIE["signedin"];
+	   setcookie("signedin",$username,time()+120 , '/');
     }
     else {
         $insertcommand = "INSERT INTO letscode VALUES ('$username','$password')";

@@ -77,16 +77,7 @@ FORM;
 <br>
 <br>
     <div id="ajaxDiv" class = "msgdisplayer"> Your confirmation will show up here.</div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <footer>
 
         <div id="leftfoot"> &#169; Haris Bhatti, Gavin Wurm, Yeonji Kim, Francesc Aguilar Lite</div>

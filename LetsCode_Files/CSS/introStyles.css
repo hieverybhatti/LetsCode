@@ -8,10 +8,10 @@ body {
 header{ min-height:50px;  }
 footer{ min-height:50px;  }
 
-body{ 
+/* body{ 
   display:flex; 
-  flex-direction:column; 
-}
+  flex-direction:column;
+} */
 
 a{
 text-decoration: underline;
@@ -24,7 +24,8 @@ background: #5be3e7;
 
 footer {
 margin: 0 auto;
-margin-top:auto; 
+/* margin-top: auto; */
+margin-top: 10px;
 width: 85%;
 text-align: center;
 border-top: 1px solid #fff;
@@ -197,7 +198,7 @@ font-size: 20pt;
 }
 
 #contactTable {
-  width: 98%;
+width: 98%;
 margin-left: auto;
 margin-right: auto;
 background-image: linear-gradient(to bottom right, #00c4cc, #7c2ae8);
@@ -207,7 +208,7 @@ border-spacing: 40px;
 
 
 #contactTable td {
-  width: 45%;
+width: 45%;
 font-size: 11pt;
 text-align: left;
 vertical-align: text-top;
