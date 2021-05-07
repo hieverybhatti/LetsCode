@@ -2,50 +2,17 @@
 <html lang="en">
 
 <head>
-    <title>Sign Up - LetsCode</title>
+    <title>Sign In - LetsCode</title>
     <meta charset="UTF-8">
     <meta name="description" content="Sign up page">
     <meta name="author" content="Yeonji/Lindsay Kim">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" href="../CSS/introStyles.css">
     <link rel="icon" href="../brandDesign/logo_icon.png">
-    <!-- <script src="signup.js" defer></script> -->
+    <script src="signin.js" defer> </script>
 </head>
 
 <body>
-    <script language="javascript" type="text/javascript">
-        //Browser Support Code
-        function ajaxFunction(server, user, pwd, dbName) {
-            var ajaxRequest; // The variable that makes Ajax possible!
-
-            ajaxRequest = new XMLHttpRequest();
-
-            // Create a function that will receive data sent from the server and will update
-            // the div section in the same page.
-
-            ajaxRequest.onreadystatechange = function() {
-                if (ajaxRequest.readyState == 4) {
-                    var ajaxDisplay = document.getElementById('ajaxDiv');
-                    ajaxDisplay.innerHTML = ajaxRequest.responseText;
-                }
-            }
-
-            // Now get the value from user and pass it to server script.
-            var username = document.getElementById('U').value;
-            var password = document.getElementById('P').value;
-            if (username && password) {
-                var queryString = "?username=" + username;
-
-                queryString += "&password=" + password + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
-
-                ajaxRequest.open("GET", "registering.php" + queryString, true);
-                ajaxRequest.send(null);
-            } else {
-                alert("please fill out the missing fields.")
-            }
-        }
-    </script>
-
     <!--navigation bar-->
 
     <header class="nav-bar">
@@ -80,11 +47,11 @@
             // echo "Database name: <code>" . $dbName . "</code><br>";
 
             print <<<FORM
-            <form id = "signin" class ="sign">
+            <form id = "signinform">
                 <center>
                     <h1 style="font-size: 45px;"> LOGIN </h1>
                 </center>
-                <table id="signin">
+                <table class="signing">
                     <tr>
                         <th>username:</th>
                     </tr>
@@ -99,14 +66,17 @@
                     </tr>
                 </table>
 
-                <input class = "sign" type = "button" onclick = "ajaxFunction('$server','$user','$pwd','$dbName')" value = " Login "/>
+                <input class = "sign" type = "button" onclick = "ajaxFunction();" value = " Login "/>
 FORM;
             ?>
             </form>
         </div>
     </div>
-
-    <div class="ajaxDiv"> Your confirmation will show up here.</div>
+<br>
+<br>
+<br>
+<br>
+    <div id="ajaxDiv" class = "msgdisplayer"> Your confirmation will show up here.</div>
     <br>
     <br>
     <br>

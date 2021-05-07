@@ -49,9 +49,9 @@
 <div class="content-area">
 <center> <h1> To Get Started Please Sign Up Below! </h1> </center>
 <div class="signup-box">
-<form id ="signupform" method="post">
+<form id ="signupform"  method="post">
 
-<table id="signup">
+<table class = "signing">
     <tr>
         <th>username:</th>
     </tr>
@@ -97,14 +97,15 @@ SIGNUP;
     </div>
 
     <br>
-    <div class="ajaxDiv"> Your confirmation will show up here.</div>
+
+    <!-- <div id="ajaxDiv" class = "displayer"> Your confirmation will show up here.</div> -->
 
 
-
+    <br>
+        <br>
+        <br>
     <footer>
-        <br>
-        <br>
-        <br>
+
         <div id="leftfoot"> &#169; Haris Bhatti, Gavin Wurm, Yeonji Kim, Francesc Aguilar Lite</div>
         <div id="rightfoot">3/10/2021</div>
 

@@ -1,4 +1,5 @@
 
+
 // later on have to change alerts to ajax 
 var server = "spring-2021.cs.utexas.edu";
 var user = "cs329e_bulko_haris";

@@ -47,6 +47,11 @@
         echo "User and password confirmed, Welcome Back " . $username;
 	setcookie("signedin",$username,time()+120);
    echo "You will be redirected back to the Getting Started Page in 3 seconds" ;
+   //Sleep for five seconds.
+sleep(5);
+
+//Redirect using the Location header.
+header('Location: http://thisinterestsme.com/php-forcing-https-over-http/');
     }
     else {
         $insertcommand = "INSERT INTO letscode VALUES ('$username','$password')";

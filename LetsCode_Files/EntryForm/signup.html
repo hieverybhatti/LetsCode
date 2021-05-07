@@ -14,6 +14,23 @@
 
 
 <body onload = "checkStatus()">
+    <?php
+
+    $server = "spring-2021.cs.utexas.edu";
+    $user = "cs329e_bulko_haris";
+    $pwd = "Along+turk\$worthy";
+    $dbName = "cs329e_bulko_haris";
+    $mysqli = new mysqli($server, $user, $pwd, $dbName);
+
+    if ($mysqli->connect_errno) {
+        die('Connect Error: ' . $mysqli->connect_errno .
+            ": " . $mysqli->connect_error);
+    }
+    // echo "Server: <code>" . $server . "</code><br>";
+    // echo "User: <code>" . $user . "</code><br>";
+    // echo "Database name: <code>" . $dbName . "</code><br>";
+
+    print <<<SIGNUP
 
 <!--navigation bar-->
 
@@ -70,19 +87,25 @@
 </table>
 <input class="sign" id = "subm" type= "button" name = "signup" value=" get started " onclick="calculateValue();"/>
 </form>
+SIGNUP;
+
+    ?>
+
+
+
     </div>
     </div>
 
     <br>
 
-    <div id="ajaxDiv" class = "msgdisplayer"> Your confirmation will show up here.</div>
+    <!-- <div id="ajaxDiv" class = "displayer"> Your confirmation will show up here.</div> -->
 
 
-
+    <br>
+        <br>
+        <br>
     <footer>
-        <br>
-        <br>
-        <br>
+
         <div id="leftfoot"> &#169; Haris Bhatti, Gavin Wurm, Yeonji Kim, Francesc Aguilar Lite</div>
         <div id="rightfoot">3/10/2021</div>
 
