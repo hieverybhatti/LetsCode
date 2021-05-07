@@ -17,6 +17,15 @@
 </script>
 </head>
 
+
+<?php
+if(!isset($_COOKIE["signedin"])){
+    $redirect = "Home/home.php";
+    setcookie("redirect",$redirect,time()+120,"/");
+    header("Location: ../../../EntryForm/signin.php");
+}
+?>
+
 <?php
 
 

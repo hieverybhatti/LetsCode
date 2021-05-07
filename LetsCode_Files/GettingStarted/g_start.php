@@ -34,14 +34,18 @@
     </style>
 </head>
 
+
+<?php
+if(!isset($_COOKIE["signedin"])){
+    $redirect = "Home/home.php";
+    setcookie("redirect",$redirect,time()+120,"/");
+    header("Location: ../EntryForm/signin.php");
+}
+?>
 <body onload="startTimer()">
     <!--navigation bar-->
 
-    <?php
-
-    if (isset($_COOKIE["signedin"])) {
-
-        print <<<GETSTARTED
+ 
         <header class="nav-bar">
             <div class="logo-bar">
                 <a href="../Home/home.html">
@@ -49,8 +53,8 @@
                 </a>
             </div>
             <nav id="navbuttons">
-                <a href="g_start.html">STARTING OUT</a>
-                <a href="../EntryForm/SignUp/signup.html">SIGN UP</a>
+                <a href="../GettingStarted/g_start.php">STARTING OUT</a>
+                <a href="../EntryForm/SignUp/signup.php">SIGN UP</a>
                 <a href="../About/contact.html">ABOUT US</a>
             </nav>
         </header>
@@ -72,14 +76,14 @@
 
                 <tr>
                     <td>To head over to our videos section click here! <br>
-                        <a href="Pages/Video/video_page.html">
+                        <a href="Pages/Video/video_page.php">
                             <img src = "images_gs/videos_button.png"
                                 alt = "(Picture of videos_button)" width = "75" height = "75"/>
                         </a>
                     </td>
 
                     <td>To head over to our documentation section click here! <br>
-                        <a href="Pages/Doc/syntax.html">
+                        <a href="Pages/Doc/syntax.php">
                             <img src = "images_gs/documentation_button.png"
                                 alt = "(Picture of documentation_button)" width = "75" height = "75"/>
                         </a>
@@ -101,7 +105,7 @@
                     </td>
 
                     <td>To head over to our projects section click here! <br>
-                        <a href="Pages/Project/project_page.html">
+                        <a href="Pages/Project/project_page.php">
                             <img src = "images_gs/projects_button.png"
                                 alt = "(Picture of projects_button)" width = "75" height = "75"/>
                         </a>
@@ -120,12 +124,12 @@
                     alt = "(Picture of starting_out)" width = "700" height = "400"/>
                 </a>
 
-                <a href="Pages/Video/video_page.html">
+                <a href="Pages/Video/video_page.php">
                 <img class = "img2"  id = "videos" src = "images_gs/videos.png"
                     alt = "(Picture of videos)" width = "700" height = "400"/>
                 </a>
 
-                <a href="Pages/Doc/doc_page.html">
+                <a href="Pages/Doc/doc_page.php">
                 <img class = "img3"  id = "documentation" src = "images_gs/documentation.png"
                     alt = "(Picture of documentation)" width = "700" height = "400"/>
                 </a>
@@ -151,15 +155,5 @@
             <div id="rightfoot">3/10/2021</div>
 
         </footer>
-        </body>
-GETSTARTED;
-    } else {
-        echo '<script>alert("You are not logged, please sign in")</script>';
-        header("Location: ../EntryForm/signin.php");
-    }
-
-
-
-    ?>
-
+    </body>
 </html>

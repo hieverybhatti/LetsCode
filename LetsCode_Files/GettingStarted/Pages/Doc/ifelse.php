@@ -12,6 +12,14 @@
     <link rel="icon" href="../../../brandDesign/logo_icon.png">
 </head>
 
+<?php
+if(!isset($_COOKIE["signedin"])){
+    $redirect = "Home/home.php";
+    setcookie("redirect",$redirect,time()+120,"/");
+    header("Location: ../../../EntryForm/signin.php");
+}
+?>
+
 <body>
     <!--navigation bar-->
 
