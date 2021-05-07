@@ -44,14 +44,10 @@
 //    $total_rows2 = $result2->num_rows;
     if ($total_rows>=1)
     {
-        echo "User and password confirmed, Welcome Back " . $username;
-	setcookie("signedin",$username,time()+120);
-   echo "You will be redirected back to the Getting Started Page in 3 seconds" ;
-   //Sleep for five seconds.
-sleep(5);
-
-//Redirect using the Location header.
-header('Location: http://thisinterestsme.com/php-forcing-https-over-http/');
+      echo "User and password confirmed, Welcome Back " . $username;
+      echo "You will be redirected back to the Getting Started Page in 3 seconds" ;
+	   setcookie("signedin",$username,time()+120);
+      echo $_COOKIE["signedin"];
     }
     else {
         $insertcommand = "INSERT INTO letscode VALUES ('$username','$password')";
@@ -65,6 +61,3 @@ header('Location: http://thisinterestsme.com/php-forcing-https-over-http/');
 
 
 //    echo "Query: <code>" . $query . "</code> <br><br>";
-   
-
-?>
