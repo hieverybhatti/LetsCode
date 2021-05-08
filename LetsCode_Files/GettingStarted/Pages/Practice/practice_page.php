@@ -15,6 +15,23 @@
         window.history.replaceState( null, null, window.location.href );
     }
 </script>
+
+<style>
+.thumbs {
+  background-color: white;
+  margin-left:auto; 
+  margin-right:auto;
+  text-align: center;
+  border-style:none;
+
+  }
+
+.thumbs td {
+  text-align: center;
+  color: black;
+}
+</style>
+
 </head>
 
 
