@@ -12,14 +12,6 @@
     <link rel="icon" href="../../../brandDesign/logo_icon.png">
 </head>
 
-
-<?php
-if(!isset($_COOKIE["signedin"])){
-    $redirect = "Home/home.php";
-    setcookie("redirect",$redirect,time()+120,"/");
-    header("Location: ../../../EntryForm/signin.php");
-}
-?>
 <body>
     <!--navigation bar-->
 
@@ -57,35 +49,31 @@ if(!isset($_COOKIE["signedin"])){
 		</table>
 	</div>
 	<div class="doc_info">
-	<div class="doc_title">Documentation-Syntax</div>
+	<div class="doc_title">Documentation-Files</div>
         <div class="doc_info-box">
 		<div class="doc">
-			<p><b>Python</b> is one of the most common programming language used these days.
-			<br>It is loved by many people for its simple yet concise syntax.
-			Unlike many other languages including java and C that require the programmer to specify the type and assign a variable,
-			python interprets the value without having to specify the type, and because of its concise and compact design, Python is easy to read and write.
+			<p><b>Files</b> store information in named locations on disk, and Python can handle files.
+			<br>A file must be opened to be processed, and there are four modes for opening a file: <b>r</b>(read), <b>w</b>(write), <b>a</b>(append), or <b>r+</b>(read and write).
+			<div class="code" style="width:100%">f = open("fileName.txt", "mode")</div>
+			And after the file is processed, it must be closed using <b>close()</b> function.
+			<div class="code" style="width:100%">f.close()</div>
 			</p>
-			<p>There are two ways to use Python.
-			<br>First, you may write the code <u>directly in command line, followed by >>>.</u>
-			<div class="code"> >>> print ("Hello World!")<br> Hello World!</div>
-			<br>Second, you may <u>create a file that ends with <i>.py</i> extension</u> for longer programs.
-			<br>To run the program, you will type <i>python (filename).py</i> in command line.
+			<div class="subcategory">Reading a File</div>
+			<p>To read a file, the file must be opened in readable modes.
+			Once it is opened, you can use <b>read()</b> function to read the whole file or <b>readline()</b> to read line by line.
+			To read remaining lines in the file, you can also use <b>readlines()</b>.
+			<div class="code" style="width:100%">f = open("fileName.txt", "r")
+			<br>for line in f:<br> &nbsp; &nbsp; line = f.readline()
+			<br> &nbsp; &nbsp; line.rstrip("\n")<br> &nbsp; &nbsp; ...<br>f.close()</div>
+			Note that <i>readline()</i> reads "\n"(newline character) as well, so you may use <b>rstrip()</b> to remove it.
 			</p>
-			<p>One unique feature about Python is that <b>indentation matters</b>.
-			<br>Instead of brackets, indentation is used to divide and sort the blocks of code.
+			<div class="subcategory">Writing and Appending a File</div>
+			<p>To write to a file, the file must be opened in writable modes. If the file is opened in <b>w</b> mode, any previous content will be overwritten.
+			If it is opened in <b>a</b> mode, new text will be added at the end of existing content.
+			<div class="code" style="width: 100%">f = open("fileName.txt", "w")
+			<br>f.write("Yes\n")<br>f.close()
+			<br>f = open("fileName.txt", "a")<br>f.write("More Yes\n")</div>
 			</p>
-			<table>
-			<tr>
-			<td class="code" style="width: 200px">x = 2<br> if (x == 3):<br> &nbsp; print("x is 3.")</td>
-			<td colspan="2">Correct syntax</td>
-			<td></td>
-			</tr>
-			<tr>
-			<td class="code" style="width: 200px">x = 2<br> if (x == 3):<br> print("x is 3.")</td>
-			<td colspan="2">No indentation, therefore will be a syntax error.</td>
-			<td></td>
-			</tr>
-			</table>
 			<table style="width:100%">
 			<tr>
 			<td colspan="2">for more information:</td>
@@ -93,9 +81,9 @@ if(!isset($_COOKIE["signedin"])){
 			<td></td>
 			</tr>
 			<tr>
-			<td><a href="https://www.geeksforgeeks.org/python-language-introduction/"><img class="site" src="site_logos/gfg.png"></a></td>
-			<td><a href="https://www.w3schools.com/python/python_syntax.asp"><img class="site" src="site_logos/w3.png"></a></td>
-			<td><a href="https://www.programiz.com/python-programming/first-program"><img class="site" src="site_logos/programiz.png"></a></td>
+			<td><a href="https://www.geeksforgeeks.org/python-handling-python/"><img class="site" src="site_logos/gfg.png"></a></td>
+			<td><a href="https://www.w3schools.com/python/python_file_handling.asp"><img class="site" src="site_logos/w3.png"></a></td>
+			<td><a href="https://www.programiz.com/python-programming/file-operation"><img class="site" src="site_logos/programiz.png"></a></td>
 			</tr>
 			</table>
 		</div>

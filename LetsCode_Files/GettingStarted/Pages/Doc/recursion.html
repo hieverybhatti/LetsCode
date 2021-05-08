@@ -12,21 +12,13 @@
     <link rel="icon" href="../../../brandDesign/logo_icon.png">
 </head>
 
-<?php
-if(!isset($_COOKIE["signedin"])){
-    $redirect = "Home/home.php";
-    setcookie("redirect",$redirect,time()+120,"/");
-    header("Location:  ../../../EntryForm/signin.php");
-}
-?>
-
 <body>
     <!--navigation bar-->
 
     <header class="nav-bar">
         <div class="logo-bar">
             <a href="../../../Home/home.html">
-                <img src="../../../brandDesign/logo_icon.PNG" width="40px">
+                <img src="../../../brandDesign/logo_icon.png" width="40px">
             </a>
         </div>
         <nav id="navbuttons">
@@ -57,33 +49,35 @@ if(!isset($_COOKIE["signedin"])){
 		</table>
 	</div>
 	<div class="doc_info">
-	<div class="doc_title">Documentation-Class</div>
+	<div class="doc_title">Documentation-Recursion</div>
         <div class="doc_info-box">
 		<div class="doc">
-			<p>A <b>class</b> is a description of a group of objects, 
-			and an <b>object</b> is a collection of variables and functions.
-			<br>To create a class, you begin with <i>class</i> instead of <i>def</i>.
-			Inside the class, <i>__init__()</i> function follows to initiate and assign values to object properties.
-			<div class="code" style="width: 100%">class Friends:<br>&nbsp; &nbsp; def __init__(self, name):
-			<br>&nbsp; &nbsp; &nbsp; &nbsp; self.name = name</div>
-			You can add functions inside the class after the values are assigned.
-			<div class="code" style="width: 100%">class Friends:<br>&nbsp; &nbsp; def __init__(self, name):
-			<br>&nbsp; &nbsp; &nbsp; &nbsp; self.name = name
-			<br>&nbsp; &nbsp; def welcome(self):
-			<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Hellow my friend, " + self.name)
-			<br>friend1 = Friends("John")<br>friend1.welcome()</div>
-			By doing so, an object(friend) named "John" is created, and the welcome function is executed.
+			<p><b>Recursion</b> is a type of method that calls itself. Remember that functions can call other functions. A function that calls itself is a recursive function.
+			<br>The most popular example that uses recursion is <i>factorial</i>.
+			<div class="code" style="width:100%">def factorial(x):
+			<br>&nbsp; &nbsp; if x == 1:<br>&nbsp; &nbsp; &nbsp; &nbsp; return 1
+			<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; return (x * factorial(x - 1))</div>
+			The following function will call itself until the number x is equal to 1. As you can see, 
+			every recursive function must have a <b>non-recursive boundary case</b> that defines a limiting condition. Once the condition is met, 
+			the recursion will stop.
 			</p>
-			<table style="width: 100%">
+			<p>Here is another example that uses recursive method: <i>fibonacci sequence</i>.
+			<div class="code" style="width:100%">def fibonacci(n):
+			<br>&nbsp; &nbsp; if n <= 1: <br>&nbsp; &nbsp; &nbsp; &nbsp; return n
+			<br>&nbsp; &nbsp; else:
+			<br>&nbsp; &nbsp; &nbsp; &nbsp; return (fibonacci(n - 1) + fibonacci(n - 2))</div>
+			</p>
+			</table>
+			<table style="width:100%">
 			<tr>
 			<td colspan="2">for more information:</td>
 			<td></td>
 			<td></td>
 			</tr>
 			<tr>
-			<td><a href="https://www.geeksforgeeks.org/python-for-loops/"><img class="site" src="site_logos/gfg.png"></a></td>
-			<td><a href="https://www.w3schools.com/python/python_for_loops.asp"><img class="site" src="site_logos/w3.png"></a></td>
-			<td><a href="https://www.programiz.com/python-programming/for-loop"><img class="site" src="site_logos/programiz.png"></a></td>
+			<td><a href="https://www.geeksforgeeks.org/recursion-in-python/"><img class="site" src="site_logos/gfg.png"></a></td>
+			<td><a href="https://www.w3schools.com/python/gloss_python_function_recursion.asp"><img class="site" src="site_logos/w3.png"></a></td>
+			<td><a href="https://www.programiz.com/python-programming/recursion"><img class="site" src="site_logos/programiz.png"></a></td>
 			</tr>
 			</table>
 		</div>
@@ -92,7 +86,7 @@ if(!isset($_COOKIE["signedin"])){
     <footer>
 
             <div id="leftfoot"> &#169; Haris Bhatti, Gavin Wurm, Yeonji Kim, Francesc Aguilar Lite</div>
-            <div id="rightfoot">3/10/2021</div>
+            <div id="rightfoot">5/06/2021</div>
     
     </footer>
 </body>

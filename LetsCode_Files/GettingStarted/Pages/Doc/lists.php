@@ -45,9 +45,14 @@ if(!isset($_COOKIE["signedin"])){
 		<tr><td><a href="syntax.html">Syntax</a></td></tr>
 		<tr><td><a href="variables.html">Variables</a></td></tr>
 		<tr><td><a href="operators.html">Operators</a></td></tr>
+		<tr><td><a href="functions.html">Functions</a></td></tr>
+		<tr><td><a href="strings.html">Strings</a></td></tr>
 		<tr><td><a href="lists.html">Lists</a></td></tr>
+		<tr><td><a href="dictionary.html">Dictionaries</a></td></tr>
 		<tr><td><a href="ifelse.html">If..Else</a></td></tr>
 		<tr><td><a href="loops.html">Loops</a></td></tr>
+		<tr><td><a href="files.html">Files</a></td></tr>
+		<tr><td><a href="recursion.html">Recursion</a></td></tr>
 		<tr><td><a href="class.html">Class</a></td></tr>
 		</table>
 	</div>
@@ -105,9 +110,9 @@ if(!isset($_COOKIE["signedin"])){
 			<td></td>
 			</tr>
 			<tr>
-			<td><a href="https://www.geeksforgeeks.org/python-list/"><img class="site" src="site_logos/gfg.PNG"></a></td>
-			<td><a href="https://www.w3schools.com/python/python_lists.asp"><img class="site" src="site_logos/w3.PNG"></a></td>
-			<td><a href="https://www.programiz.com/python-programming/list"><img class="site" src="site_logos/programiz.PNG"></a></td>
+			<td><a href="https://www.geeksforgeeks.org/python-list/"><img class="site" src="site_logos/gfg.png"></a></td>
+			<td><a href="https://www.w3schools.com/python/python_lists.asp"><img class="site" src="site_logos/w3.png"></a></td>
+			<td><a href="https://www.programiz.com/python-programming/list"><img class="site" src="site_logos/programiz.png"></a></td>
 			</tr>
 			</table>
 		</div>
