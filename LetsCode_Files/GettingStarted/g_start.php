@@ -69,7 +69,7 @@ if (!isset($_COOKIE["signedin"])) {
             <a href="../About/contact.php">ABOUT US</a>
         </nav>
 
-        
+
     </header>
 
     <!--end of navigation bar -->
@@ -91,13 +91,13 @@ if (!isset($_COOKIE["signedin"])) {
 
                 <tr>
                     <td>To head over to our videos section click here! <br>
-                        <a href="Pages/Video/video_page.php">
+                        <a href="Pages/Video/video_page.html">
                             <img src="images_gs/videos_button.png" alt="(Picture of videos_button)" width="75" height="75" />
                         </a>
                     </td>
 
                     <td>To head over to our documentation section click here! <br>
-                        <a href="Pages/Doc/syntax.php">
+                        <a href="Pages/Doc/syntax.html">
                             <img src="images_gs/documentation_button.png" alt="(Picture of documentation_button)" width="75" height="75" />
                         </a>
                     </td>
