@@ -8,7 +8,6 @@ var dbName = "cs329e_bulko_haris";
 
 
 function ajaxFunction() {
-	alert("im inside");
 	// var username = "";
 	var username = document.getElementById('U').value;
 	var password = document.getElementById('P').value;
@@ -25,13 +24,7 @@ function ajaxFunction() {
 
 	queryString += "&password=" + password + "&server=" + server + "&user=" + user + "&pwd=" + pwd + "&dbName=" + dbName;
 
-	alert(queryString);
-	alert("the user name and pass is" + username + password);
-
 	ajaxRequest.open("GET", "registering.php" + queryString, true);
 	ajaxRequest.send(null);
 	// window.location.href = "../GettingStarted/g_start.php";
-	setTimeout(function () {
-		window.location.href = "../GettingStarted/g_start.php";
-	}, 3000);
 }

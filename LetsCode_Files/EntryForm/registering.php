@@ -14,7 +14,6 @@
    if ($mysqli->connect_errno) {
       die('Connect Error: ' . $mysqli->connect_errno . ": " .  $mysqli->connect_error);
    } else {
-      echo "<code>...Connection successful</code> <br>";
    }
   
    //Select Database
@@ -34,9 +33,7 @@
    $query = "SELECT user, pass FROM letscode WHERE user = '$username' AND pass = '$password'";
 //    $query2 = "SELECT username FROM passwords WHERE username = '$username'";
    //Execute query
-   echo "<code>...Executing query</code><br><br>";
-   echo'<script>alert("You are not logged, please sign in")</script>';
-   echo $query;
+
    $result = $mysqli->query($query) or die($mysqli->error);
 //    $result2 =$mysqli->query($query2) or die($mysqli->error);
 
@@ -45,16 +42,11 @@
     if ($total_rows>=1)
     {
       echo "User and password confirmed, Welcome Back " . $username;
-      echo "You will be redirected back to the Getting Started Page in 3 seconds" ;
+      echo " You can now visit the Starting Out Tab!" ;
 	   setcookie("signedin",$username,time()+120 , '/');
     }
     else {
-        $insertcommand = "INSERT INTO letscode VALUES ('$username','$password')";
-        $inserter = $mysqli->query($insertcommand);
-        if (!$inserter) {
-            die("Query failed: ($mysqli->error <br> SQL command= $insertcommand");
-        }
-        echo "New user registered!";
+       echo "Invalid Username or Password. Please Try Again";
     }
 
 
